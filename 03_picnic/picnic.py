@@ -13,18 +13,13 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Picnic game',
-        formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        description="Picnic game",
+        formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+    )
 
-    parser.add_argument('foods',
-                        metavar='str',
-                        nargs='+',
-                        help='item(s) to bring')
+    parser.add_argument("foods", metavar="str", nargs="+", help="item(s) to bring")
 
-    parser.add_argument('-s',
-                        '--sorted',
-                        help='Sort the items',
-                        action='store_true')
+    parser.add_argument("-s", "--sorted", help="Sort the items", action="store_true")
 
     return parser.parse_args()
 
@@ -50,5 +45,5 @@ def main():
 
 
 # --------------------------------------------------
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
